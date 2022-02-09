@@ -1,7 +1,6 @@
 ![](../png/postgresql.png?raw=true)
 
-## Blog Post with
-
+## Stack Overflow Developer Survey
 
 ### Project Summary
 * Model and
