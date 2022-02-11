@@ -1,6 +1,7 @@
 ![](readme_assets/2021-stack-overflow-dev-survey.png?raw=true)
 
-## Stack Overflow Developer Survey
+
+## 2021 Stack Overflow Developer Survey
 
 ### Project Summary
 * Model and
