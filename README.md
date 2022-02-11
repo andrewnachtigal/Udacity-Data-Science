@@ -1,3 +1,5 @@
+![](readme_assets/udacity-logo.png?raw=true)
+
 # Udacity-Data-Science
 nanodegree project repository
 
