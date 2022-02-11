@@ -1,4 +1,4 @@
-![](../png/postgresql.png?raw=true)
+![](../readme_assets/2021-stack-overflow-dev-survey.png?raw=true)
 
 ## Stack Overflow Developer Survey
 
