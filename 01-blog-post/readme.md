@@ -1,4 +1,4 @@
-![](readme-assets/2021-stack-overflow-dev-survey.png?raw=true)
+![](readme-assets/sof-2020-dev-survey.png?raw=true)
 
 # 2020 Stack Overflow Developer Survey
 
