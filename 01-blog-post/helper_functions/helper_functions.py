@@ -20,6 +20,13 @@ def print_question_text(col_name: str) -> None:
 # https://stackoverflow.com/questions/14156473/can-you-write-a-str-replace-using-dictionary-values-in-python
 
 def replace_values_in_string(text, args_dict):
+        '''Does something
+
+        Args:
+
+        Returns:
+        
+        '''
     for key in args_dict.keys():
         text = text.replace(key, str(args_dict[key]))
     return text

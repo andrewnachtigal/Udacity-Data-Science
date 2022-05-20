@@ -5,9 +5,7 @@
 ## Table of Contents
 1. [Project Description](#project_desc)
 2. [CRISP-DM For Job Satisfaction Prediction](#CRISP-DM)
-3. [File Structure](#fileStructure)
-4. [Requirements](#requirements)
-5. [Acknowledgements](#ack)
+3. [Acknowledgements](#ack)
 
 ### 1. Project Description <a name="project_desc"></a>
 In this repository, we use [Stack Overflow Annual Developer Survey data](https://insights.stackoverflow.com/survey)
