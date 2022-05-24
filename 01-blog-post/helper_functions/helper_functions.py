@@ -1,4 +1,5 @@
-# print survey questions from schema
+
+# print question text function
 
 def print_question_text(col_name: str) -> None:
     '''Print question text for specified column name from schema dataframe
@@ -6,9 +7,8 @@ def print_question_text(col_name: str) -> None:
     Args:
     col_name: str. Name of column in schema dataframe
 
-    Returns:
-    None
-    '''
+    Returns: None'''
+
     try:
         question_text = schema.loc[schema.Column==col_name,'QuestionText'].values[0]
         print(f'{col_name}: {question_text}\n')
@@ -20,13 +20,11 @@ def print_question_text(col_name: str) -> None:
 # https://stackoverflow.com/questions/14156473/can-you-write-a-str-replace-using-dictionary-values-in-python
 
 def replace_values_in_string(text, args_dict):
-        '''Does something
+    '''replace values in string using a dictionary
 
-        Args:
+    Args: text, args_dict
+    Returns: new dictonary key-value'''
 
-        Returns:
-        
-        '''
     for key in args_dict.keys():
         text = text.replace(key, str(args_dict[key]))
     return text

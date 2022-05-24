@@ -11,14 +11,18 @@
 In this repository, we use [Stack Overflow Annual Developer Survey data](https://insights.stackoverflow.com/survey)
 to explore and contrast data and developer roles. Exploratory analyses includes information regarding compensation, job satisfaction, educational background, etc.
 
-Machine learning modeling is used to predict job satisfaction.
+Next, we explore job satisfaction for the two groups of respondents, data roles and developer roles and how satisfied
+each group is in their jobs.
+
+Finally, two machine learning models, logistic regression and random forest classifiers, are used to identify
+features that predict job satisfaction.
 
 A medium post about the analyses results can be found [here](https://lcxustc.medium.com/salary-satisfaction-trend-of-data-jobs-f47bdf72afa3).
 
 ### 2. The Cross Industry Standard Process for Data Mining (CRISP-DM) for Job Satisfaction Prediction <a name="CRISP-DM"></a>
 In particular, for the job satisfaction prediction, the procedure of [CRISP-DM](https://www.datascience-pm.com/crisp-dm-2/) for data mining is adhered to.
 
-CRISP-DM steps revolve around data:
+CRISP-DM data steps:
 
 1. Business Understanding - What does the business need?
 2. Data Understanding – What data is available and what is needed? Is the data clean?
