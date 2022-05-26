@@ -3,73 +3,66 @@
 # 2020 Stack Overflow Developer Survey
 
 ## Table of Contents
-1. [Project Description](#project_desc)
-2. [CRISP-DM For Job Satisfaction Prediction](#CRISP-DM)
-3. [Acknowledgements](#ack)
+0. [Installation](#install)
+1. [Motivation & Project Description](#project_desc)
+2. [File Descriptions](#file_desc)
+4. [Licensing, Author, & Acknowledgements](#acknowl)
+5. [Authors](#author)
+6. [License](#license)
 
-### 1. Project Description <a name="project_desc"></a>
+
+## 0. Installation <a id='install'></a>
+
+Principle project code is contained in the Jupyter notebook 'stackoverflow'.
+
+The project was written in Python 3.9.7 and requires the following packages:
+* Pandas, NumPy, sklearn, matplotlib, seaborn
+
+
+## 1. Motivation & Project Description <a name="project_desc"></a>
+
 In this repository, we use [Stack Overflow Annual Developer Survey data](https://insights.stackoverflow.com/survey)
-to explore and contrast data and developer roles. Exploratory analyses includes information regarding compensation, job satisfaction, educational background, etc.
-
-Next, we explore job satisfaction for the two groups of respondents, data roles and developer roles and how satisfied
-each group is in their jobs.
-
-Finally, two machine learning models, logistic regression and random forest classifiers, are used to identify
+to explore and contrast data and developer roles. Exploratory analyses includes information regarding compensation, job satisfaction, educational background, etc. Next, job satisfaction is explored for data roles and developer roles, and how satisfied
+each group is in their jobs. Finally, two machine learning models, logistic regression and random forest classifiers, are used to identify
 features that predict job satisfaction.
 
-A medium post about the analyses results can be found [here](https://lcxustc.medium.com/salary-satisfaction-trend-of-data-jobs-f47bdf72afa3).
-
-### 2. The Cross Industry Standard Process for Data Mining (CRISP-DM) for Job Satisfaction Prediction <a name="CRISP-DM"></a>
+#### The Cross Industry Standard Process for Data Mining (CRISP-DM) for Job Satisfaction Prediction <a name="CRISP-DM"></a>
 In particular, for the job satisfaction prediction, the procedure of [CRISP-DM](https://www.datascience-pm.com/crisp-dm-2/) for data mining is adhered to.
 
-CRISP-DM data steps:
-
-1. Business Understanding - What does the business need?
-2. Data Understanding – What data is available and what is needed? Is the data clean?
-3. Data Preparation - How should the data be organized for modeling?
-4. Modeling - What modeling techniques should be applied?
-5. Evaluate and iterate - Which model best meets the business objectives?
-6. Model deployment - How do stakeholders access the results?
-
-
-#### - Business Problem
+#### - Business Problem  
 We are interested in understanding job satisfaction of those working in data roles, and try to identify some important factors. This information is useful for students and other early career or career switching professionals interested in
 entering what has recently become a much in demand skill set. This would be useful for career advisors in universities and career coaching professionals to update and improve their advising information set.
 
+#### - Data Understanding  
+The Stack Overflow Developer's Survey focuses on technology workers with a general developer background but includes related fields including data. The survey covers questions about personal background such as age, gender, education level, and job-related questions such as salary, work hours, job types, job satisfaction, etc. This project focuses on responders who identify as developers and those with data-related roles. Responses to job satisfaction questions are used to understand factors that contribute to job satisfaction. Exploratory data analysis is used to gain initial insight into each role as well as job satisfaction. Then modeling techniques are applied.
 
-#### - Data Understanding
-The Stack Overflow Developer's Survey
+* Q1. Can we distinguish between data roles and developer roles?  
+* Q2. How satisfied are data and developer roles with their jobs?
+* Q3. Can predictors of job satisfaction be modeled through machine learning?
+
+#### - Data Preparation  
+To prepare the raw survey data for modeling, developer and data role response information is identified and extracted. Standard data preparation procedure have been used, including:
+
+* select a subset of features interest
+* missing data management
+* appropriate feature preprocessing
+* categorical data encoding
+
+#### - Modeling  
+Data is split into training and test set and trained using a logistic regression model and a random forest model. Linear modelling in a classification context consists of regression followed by a transformation to return a categorical output and thereby producing a decision boundary. A random forest is a meta estimator that fits a number of decision tree classifiers on various sub-samples of the dataset and uses averaging to improve the predictive accuracy and control over-fitting.
 
 
+## 2. File Descriptions  <a name="file_desc"></a>
+In addition to project code contained in the notebook 'stackoverflow', support functions are found under the 'helper_functions' folder.
 
-\is a questionnaire designed for people with general developer background. It
- covers questions about personal background such as age, gender, education level, and job-related questions such as
-  salary, work hours, job types, job satisfaction, etc. We focus on responders who have a data-related jobs and use the
-   responses to job satisfaction as the entry point to understand what contribute to job satisfaction. Exploratory
-    data analysis has been applied to get some preliminary insight into job satisfaction. Then modelling technique is applied.
 
-#### - Data Preparation
-To prepare the raw survey data for modeling, we need to first extract information from respondents employed in data related roles. Standard data preparation procedure has been applied, mainly including:
+## 4. Licensing, Author, & Acknowledgements <a name="acknowl"></a>
 
-* select the subset of data of interest and transform raw data properly
-* feature selection
-* missing data imputation
-* categorical data encoding.
+This project was written by Andrew Nachtigal
 
-There are 10,372 data instances and 38 features after data preparation (54 feature columns after one-hot encoding).
-
-#### - Modelling
-There are five possible responses to job satisfaction, so it is a multi-classification problem. Data has been split
-into training and test set. An untuned Gaussian Naive Bayes has been tried as a baseline model. And then grid search with cross-validation technique is applied to tune XGBoost model. Average ROC-AUC score has been used as the main metric for hyperparameter tuning and model performance evaluation, while other metrics such as Log-Loss, Accuracy, average Precision (macro), average Recall (macro) and Confusion Matrix have been used together to give a comprehensive evaluation of the model performance.
-
-#### - Evaluation
-A set of metrics have been used to evaluate the model performance. Although there exist the overfitting issue to
-some extent, the model performance is considered acceptable and the model has a reasonable predictive power. We also applied some explainability technique (e..g, [SHAP](https://github.com/slundberg/shap)) to get more insight of the modelling result, such as key drivers (e.g., Salary, OnboardExperience, Age, YearsCode, CompanySize) and dependence relationship w.r.t. predicting job satisfaction.
-
-#### - Deployment
-This project doesn't cover the deployment part, but with the trained model, one can productionize it, such as
-integrating it into an App, and score new data instance.
-
-### 3. Acknowledgements <a name="ack"></a>
 Stack Overflow data was used in this project. Analysis or conclusions are the
 work of the author.
+
+The MIT license gives users express permission to reuse code for any purpose.
+
+A medium post about the analyses results can be found [here](https://lcxustc.medium.com/salary-satisfaction-trend-of-data-jobs-f47bdf72afa3).
