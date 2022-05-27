@@ -6,16 +6,12 @@
 0. [Installation](#install)
 1. [Motivation & Project Description](#project_desc)
 2. [File Descriptions](#file_desc)
-4. [Licensing, Author, & Acknowledgements](#acknowl)
-5. [Authors](#author)
-6. [License](#license)
+3. [Licensing, Author, & Acknowledgements](#acknowl)
 
 
 ## 0. Installation <a id='install'></a>
 
-Principle project code is contained in the Jupyter notebook 'stackoverflow'.
-
-The project was written in Python 3.9.7 and requires the following packages:
+Principle project code is contained in the Jupyter notebook 'stackoverflow'. The project was written in Python 3.9.7 and requires the following packages:
 * Pandas, NumPy, sklearn, matplotlib, seaborn
 
 
@@ -56,7 +52,7 @@ Data is split into training and test set and trained using a logistic regression
 In addition to project code contained in the notebook 'stackoverflow', support functions are found under the 'helper_functions' folder.
 
 
-## 4. Licensing, Author, & Acknowledgements <a name="acknowl"></a>
+## 3. Licensing, Author, & Acknowledgements <a name="acknowl"></a>
 
 This project was written by Andrew Nachtigal
 
@@ -65,4 +61,4 @@ work of the author.
 
 The MIT license gives users express permission to reuse code for any purpose.
 
-A medium post about the analyses results can be found [here](https://lcxustc.medium.com/salary-satisfaction-trend-of-data-jobs-f47bdf72afa3).
+A medium post about the analyses results can be found [here](https://medium.com/@ajnacht/sof-2020-three-takeaways-abeb675c4454).
