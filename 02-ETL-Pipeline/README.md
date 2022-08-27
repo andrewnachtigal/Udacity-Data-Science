@@ -113,7 +113,3 @@ You can use **ML Pipeline Preparation Notebook** to re-train the model or tune i
 3. The main page shows some graphs about training dataset, provided by Figure Eight
 
 ![Main Page](screenshots/main_page.png)
-
-4. Sample run of process_data.py
-
-![Process Data](screenshots/process_data.png)
