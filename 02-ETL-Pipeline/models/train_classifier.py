@@ -49,16 +49,19 @@ def load_data(database_filepath):
         dataframe containing (X) features and (y) labels
     '''
 
-    database_filepath = "../data/disaster_response.db"
+    #database_filepath = "../data/DisasterResponse.db"
     engine = create_engine('sqlite:///' + database_filepath)
-    df = pd.read_sql_table('message_table', engine)
+    df = pd.read_sql_table('DisasterResponse_table', engine)
+
+
     df = df.drop(['child_alone'], axis=1)
     df['related'] = df['related'].map(lambda x: 1 if x == 2 else x)
 
     # load data from database
     X = df['message']
     y = df.iloc[:,4:]
-    return X, y
+    category_names = list(y.columns.values)
+    return X, y, category_names
 
 
 def tokenize(text):
@@ -133,12 +136,8 @@ def evaluate_model(model, X_test, Y_test, category_names):
         None (printed evaluation results)
     '''
 
-    Y_pred = pipeline.predict(X_test)
+    Y_pred_test = model.predict(X_test)
     print(classification_report(Y_test.values, Y_pred_test, target_names=category_names))
-
-    # Calculate and print evaluation metrics
-    eval_metrics = get_eval_metrics(np.array(Y_test), Y_pred, category_names)
-    print(eval_metrics)
 
 
 def save_model(model, model_filepath):

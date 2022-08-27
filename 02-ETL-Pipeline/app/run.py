@@ -8,7 +8,9 @@ from nltk.tokenize import word_tokenize
 from flask import Flask
 from flask import render_template, request, jsonify
 from plotly.graph_objs import Bar
-from sklearn.externals import joblib
+import plotly.colors
+import joblib
+#from sklearn.externals import joblib
 from sqlalchemy import create_engine
 
 
@@ -26,32 +28,40 @@ def tokenize(text):
     return clean_tokens
 
 # load data
-engine = create_engine('sqlite:///../data/YourDatabaseName.db')
-df = pd.read_sql_table('YourTableName', engine)
+engine = create_engine('sqlite:///../data/DisasterResponse.db')
+df = pd.read_sql_table('DisasterResponse_table', engine)
 
 # load model
-model = joblib.load("../models/your_model_name.pkl")
+model = joblib.load("../models/classifier.pkl")
 
 
-# index webpage displays cool visuals and receives user input text for model
+# index webpage displays visuals and receives user input text for model
 @app.route('/')
 @app.route('/index')
 def index():
 
-    # extract data needed for visuals
-    # TODO: Below is an example - modify to extract data for your own visuals
+    # extract data for graphics
+    # graph 1
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
 
-    # create visuals
-    # TODO: Below is an example - modify to create your own visuals
+    # graph 2
+    category_names = df.iloc[:,4:].columns
+    category_boolean = (df.iloc[:,4:] != 0).sum().values
+
+    # create graphs
     graphs = [
+            # GRAPH 1 - Message Genres
         {
-            'data': [
-                Bar(
-                    x=genre_names,
-                    y=genre_counts
-                )
+            "data": [
+                {
+                    "x": genre_names,
+                    "y": genre_counts,
+                    "type": "bar",
+                    "marker": {
+                        "color": 'rgb(66,23,122)'
+                      }
+                }
             ],
 
             'layout': {
@@ -63,8 +73,34 @@ def index():
                     'title': "Genre"
                 }
             }
+        },
+            # GRAPH 2 - Message categories
+        {
+            'data': [
+                {
+                    "x": category_names,
+                    "y": category_boolean,
+                    "type": "bar",
+                    "marker": {
+                        "color": 'rgb(168,30,164)'
+                      }
+                }
+            ],
+
+            'layout': {
+                'title': 'Distribution of Message Categories',
+                'yaxis': {
+                    'title': "Count"
+                },
+                'xaxis': {
+                    'title': "Category",
+                    'tickangle': 80
+                }
+            }
         }
+
     ]
+
 
     # encode plotly graphs in JSON
     ids = ["graph-{}".format(i) for i, _ in enumerate(graphs)]
