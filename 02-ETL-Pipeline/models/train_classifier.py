@@ -53,9 +53,7 @@ def load_data(database_filepath):
     engine = create_engine('sqlite:///' + database_filepath)
     df = pd.read_sql_table('DisasterResponse_table', engine)
 
-
     df = df.drop(['child_alone'], axis=1)
-    df['related'] = df['related'].map(lambda x: 1 if x == 2 else x)
 
     # load data from database
     X = df['message']
