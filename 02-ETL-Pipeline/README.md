@@ -9,8 +9,9 @@
 2. [Getting Started](#getting_started)
 	1. [Dependencies](#dependencies)
 	2. [Installing](#installation)
-	3. [Executing Program](#execution)
-	4. [Additional Material](#material)
+	3. [File Description](#filedescription)
+	4. [Executing Program](#execution)
+	5. [Additional Material](#material)
 3. [Authors](#authors)
 4. [License](#license)
 5. [Acknowledgement](#acknowledgement)
@@ -45,6 +46,12 @@ To clone the git repository:
 ```
 git clone https://github.com/andrewnachtigal/udacity-disaster-response-pipeline.git
 ```
+
+<a name="filedescription"></a>
+### File Description
+
+![File Description](screenshots/file_description.png)
+
 <a name="execution"></a>
 ### Executing Program:
 1. You can run the following commands in the project's directory to set up the database, train model and save the model.
@@ -110,11 +117,3 @@ You can use **ML Pipeline Preparation Notebook** to re-train the model or tune i
 4. Sample run of process_data.py
 
 ![Process Data](screenshots/process_data.png)
-
-5. Sample run of train_classifier.py
-
-![Train Classifier without Category Level Precision Recall](screenshots/train_classifier.png)
-
-6. Sample run of train_classifier.py with precision, recall etc. for each category
-
-![Train Classifier with Category Level Precision Recall](screenshots/train_classifier_category_precision_recall.png)
