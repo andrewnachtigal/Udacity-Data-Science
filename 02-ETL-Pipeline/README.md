@@ -1,5 +1,5 @@
 # Machine Learning for Disaster Response
-## (Udacity - Data Science Nanodegree)
+**Udacity Data Science Nanodegree**
 
 ![Intro Pic](screenshots/intro.png)
 
