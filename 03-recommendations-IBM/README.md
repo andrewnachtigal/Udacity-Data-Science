@@ -9,31 +9,34 @@ In order to determine which articles to show to each user, you will be performin
 
 Github link: https://github.com/yvsajay/Recommendations-with-IBM-Watson-
 
-##### Table of Contents  
-- [Project Motivation](#project-motivation)
-- [Libraries used:](#libraries)
-- [The Process](#the-process)
-- [Acknowledgements](#acknowledgements)
+### Table of Contents  
+1. [Project Motivation](#project-motivation)
+2. [Libraries used:](#libraries)
+3. [Project Steps](#project-steps)
+4. [Authors](#authors)
+5. [Acknowledgements](#acknowledgements)
 
 
 ## Project Motivation
 >This project is being done as a part of the Udacity Data Scientist Nanodegree Term 2 Project 3. It involves Rank based filtering, Collaborative filtering, and SVD models for recommendations.
 
-### Libraries <a name="libraries"></a>
-
+## Libraries <a name="libraries"></a>
     Pandas
     Numpy
     Matplotlib
     Pickle
 
-## The Process
-The process has 5 steps
+## Project Steps <a name="project-steps"></a>
 1. Exploratory Data Analysis
 2. Rank Based Recommendations
 3. User-User Based Collaborative Filtering
 4. Matrix Factorization
 5. Extras & Concluding
 
-## Acknowledgements
-1. [IBM Watson](https://www.ibm.com/watson) for providing us the data.
-2. Udacity for giving the direction and scope of the project
+<a name="authors"></a>
+## Authors
+
+* [Andrew Nachtigal](https://github.com/andrewnachtigal)
+
+## Acknowledgements <a name="acknowledgments"></a>
+[IBM Watson](https://www.ibm.com/watson) for providing us the data.
