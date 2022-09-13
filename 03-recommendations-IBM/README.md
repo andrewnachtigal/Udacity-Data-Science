@@ -18,7 +18,8 @@ Github link: https://github.com/yvsajay/Recommendations-with-IBM-Watson-
 
 
 ## Project Motivation
->This project is being done as a part of the Udacity Data Scientist Nanodegree Term 2 Project 3. It involves Rank based filtering, Collaborative filtering, and SVD models for recommendations.
+>This project involves Rank based filtering, Collaborative filtering, and SVD
+models to build recommendation engines.
 
 ## Libraries <a name="libraries"></a>
     Pandas
@@ -39,4 +40,4 @@ Github link: https://github.com/yvsajay/Recommendations-with-IBM-Watson-
 * [Andrew Nachtigal](https://github.com/andrewnachtigal)
 
 ## Acknowledgements <a name="acknowledgments"></a>
-[IBM Watson](https://www.ibm.com/watson) for providing us the data.
+[IBM Watson](https://www.ibm.com/watson) for providing data.
