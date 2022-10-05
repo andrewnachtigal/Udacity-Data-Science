@@ -1,1 +1,8 @@
+# Ignore Mac system files
+
+
+# data files
+/04-spark-capstone/data/mini_sparkify_event_data.json
+
+# plot files
 plots/
