@@ -1,5 +1,20 @@
 # Customer Churn Prediction Project
 
+
+### Table of Contents  
+1. [Project Motivation](#project-motivation)
+2. [Requirements](#requirements)
+3. [Libraries used](#libraries)
+4. [File Descriptions](#file-descriptions)
+5. [Project Steps](#project-steps)
+6. [Project Results-Post](#project-results-post)
+7. [Authors](#authors)
+8. [Acknowledgements](#acknowledgements)
+
+
+
+## Project Motivation <a name="project-motivation"></a>
+
 Sparkify is a digital music service similar to Spotify or Pandora. Many users stream the songs from the
 service every day either using the free tier that place advertisements between the songs or using the premium
 subscription model, where they stream music with no advertisements but paying a monthly fee rate. Users can upgrade,
@@ -11,25 +26,6 @@ which users are at risk to churn deleting their accounts since this can potentia
 money in revenues.
 
 
-### Table of Contents  
-1. [Project Motivation](#project-motivation)
-2. [Requirements](#requirements)
-3. [Libraries used](#libraries)
-4. [File Descriptions](#file-descriptions)
-4. [Project Steps](#project-steps)
-5. [Authors](#authors)
-6. [Acknowledgements](#acknowledgements)
-
-
-1. <a href = "#Requirements" > Requirements </a>
-2. <a href = "#Jupyter-Notebook"> Jupyter Notebook </a>
-3. <a href = "#Data" > Data </a>
-4. <a href = "#Summary-of-Results" > Summary of Results </a>
-5. <a href = "#Article-of-the-Project" > Article of the Project </a>
-6. <a href = "#Acknowledgements" > Acknowledgements </a>
-
-## Project Motivation <a name="project-motivation"></a>
-
 ## Requirements <a name="requirements"></a>
 The following libraries are needed to run the notebook:
 + numpy
@@ -39,6 +35,7 @@ The following libraries are needed to run the notebook:
 + matplotlib
 + seaborn
 + pyspark
+
 
 
 ## File Descriptions <a name="file-descriptions"></a>
