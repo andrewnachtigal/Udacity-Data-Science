@@ -53,9 +53,7 @@ the service
 
 ## Summary of Results
 
-Accuracy and F1 score obtained for five different models are displayed in the following
-table:
-
+Accuracy and F1 score obtained for five different models are displayed below.
 
 | Model name | Accuracy | f1score | Training time (min:sec)|
 | :---: | :---: | :---: | :---: |
@@ -69,8 +67,9 @@ table:
 
 Model results are displayed below:
 
-![Accuracy](https://github.com/pedflotor/Sparkify-Churn-Prediction/blob/master/images/Accuracy.png)
-![f1score](https://github.com/pedflotor/Sparkify-Churn-Prediction/blob/master/images/f1score.png)
+
+![Accuracy](https://github.com/andrewnachtigal/Udacity-Data-Science/blob/main/04-spark-capstone/model_accuracy.png)
+![f1score](https://github.com/andrewnachtigal/Udacity-Data-Science/blob/main/04-spark-capstone/f1_score.png)
 
 <br />
 
