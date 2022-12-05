@@ -37,9 +37,9 @@ The following libraries are needed to run the notebook:
 
 ## File Descriptions <a name="file-descriptions"></a>
 
-## Jupyter Notebook
-Here will be done the analysis and develop of the machine learning models to predict the churn
-of the users in the service
+Jupyter Notebook
+This project and all analysis and development of machine learning models for
+churn prediction was completed using a Jupyter Notebook.
 
 * `Sparkify.ipynb`: exploratory data analysis, data preprocessing, and pilot development of machine learning model on local machine using data subset from [Udacity]().
 * `mini_sparkify_event_data.json`: subset of user activity data. (not uploaded due to data quota limit)
@@ -67,7 +67,7 @@ table:
 
 <br />
 
-A comparison of these results can be seen in the following pictures:
+Model results are displayed below:
 
 ![Accuracy](https://github.com/pedflotor/Sparkify-Churn-Prediction/blob/master/images/Accuracy.png)
 ![f1score](https://github.com/pedflotor/Sparkify-Churn-Prediction/blob/master/images/f1score.png)
@@ -76,20 +76,16 @@ A comparison of these results can be seen in the following pictures:
 
 The best fitting model was a Logistic Regresion Classificatio model with accuracy
 of 0.91 and F1 score of 0.90. Important features were user tenure (registration_min),
-friend, and average songs per session.
-
-From them, the higher the value of these features are, most likely the user will
-stay in the service and will not churn.
+friend, and average songs per session. These are the best predictors of a customer
+remaining with the service and not churning.
 
 <br />
 
 Future improvements may include a larger dataset and use increased parameters
 in Grid Search to tune the models.
 
-
 ## Project Blog Post on Medium
 * https://medium.com/@ajnacht/customer-churn-prediction-5aad7d80afde
-
 
 ## Acknowledgements
 + https://spark.apache.org/docs/latest/ml-classification-regression.html
