@@ -8,7 +8,7 @@
 4. [File Descriptions](#file-descriptions)
 5. [Project Steps](#project-steps)
 6. [Project Results-Post](#project-results-post)
-7. [Authors](#authors)
+7. [Author](#author)
 8. [Acknowledgements](#acknowledgements)
 
 
@@ -73,7 +73,7 @@ Model results are displayed below:
 
 <br />
 
-The best fitting model was a Logistic Regresion Classificatio model with accuracy
+The best fitting model was a Logistic Regresion Classification with accuracy
 of 0.91 and F1 score of 0.90. Important features were user tenure (registration_min),
 friend, and average songs per session. These are the best predictors of a customer
 remaining with the service and not churning.
@@ -85,6 +85,16 @@ in Grid Search to tune the models.
 
 ## Project Blog Post on Medium
 * https://medium.com/@ajnacht/customer-churn-prediction-5aad7d80afde
+
+
+## Author <a name="author"></a>
+
+This project was written by Andrew Nachtigal
+
+Stack Overflow data was used in this project. Analysis or conclusions are the
+work of the author.
+
+The MIT license gives users express permission to reuse code for any purpose.
 
 ## Acknowledgements
 + https://spark.apache.org/docs/latest/ml-classification-regression.html
